@@ -1,0 +1,30 @@
+body {
+  margin:           8px;
+  padding:          0px;
+  color:            #8c8c8c;
+}
+
+body > header {
+  height:           100%;
+  background-color: #ff9900;
+  color:            #ffffff;
+  text-align:       center;
+}
+body > header > a {
+  text-color:       #99e7ff;
+}
+
+main > form > div {
+  height:           100%;
+}
+main > form > div > input {
+  border:           none;
+  border-bottom:    2px solid #99e7ff;
+}
+
+main > form > div > div {
+  border:           3px dotted #99e7ff;
+}
+main > form > div > div > h5 {
+  font-size:        24px;
+}
