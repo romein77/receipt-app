@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <title>
+      Receipt-app - Make quick receipts
+    </title>
+    <link
+       rel="stylesheet"
+      href="main.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  </head>
+  <body data-ng-app="">
+    <header>
+      <h1>Receipt-app</h1>
+      <h2>Make receipts in less then one minute!</h2>
+      <h3>Create one now!!</h3>
+    </header>
+    <main>
+      <form>
+        <div id="1">
+          <p>
+            What is the <b>subject</b>?
+          </p>
+          <input
+               ng-model="s"
+            placeholder="Subject..."
+          />
+          <a href="#2">Next</a>
+        </div>
+        
+        <div id="2">
+          <p>
+            What's the <b>amount</b> of <span ng-bind="s"></span>?
+          </p>
+          <input
+               ng-model="a"
+            placeholder="Amount..."
+          />
+          <a href="#1">Previous</a>
+          <a href="#3">Next</a>
+        </div>
+        
+        <div id="3">
+          <p>
+            Who is the lucky <b>receiver</b> of <span ng-bind="a"></span> for <span ng-bind="s"></span>?
+          </p>
+          <input
+               ng-model="nr"
+            placeholder="Name receiver..."
+          />
+          <a href="#2">Previous</a>
+          <a href="#4">Next</a>
+        </div>
+        
+        <div id="4">
+          <p>
+            <b>Who</b> has to <b>pay</b> <span ng-bind="nr"></span> for <span ng-bind="s"></span>?
+          </p>
+          <input
+               ng-model="ns"
+            placeholder="Name payer..."
+          />
+          <a href="#3">Previous</a>
+          <a href="#5">Next</a>
+        </div>
+        
+        <div id="5">
+          <p>
+            This is the receipt. Print, cut and done!
+          </p>
+          <input
+               ng-model="ns"
+            placeholder="Name payer..."
+          />
+          <div>
+            <h5>Receipt</h5>
+            <p><span ng-bind="ns"></span> has paid <span ng-bind="a"></span> to <span ng-bind="nr"></span>. <span ng-bind="nr"></span> thanks you for your money!
+          </div>
+          <div>
+            <h5>Receipt</h5>
+            <p><span ng-bind="ns"></span> has paid <span ng-bind="a"></span> to <span ng-bind="nr"></span>. <span ng-bind="nr"></span> thanks you for your money!
+          </div>
+         </div>
+       </form>
+     </main>
+   </body>
+</html>
