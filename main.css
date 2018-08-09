@@ -29,3 +29,9 @@ main > form > div > div {
 main > form > div > div > h5 {
   font-size:        24px;
 }
+
+@media print {
+  header, div#1, div#2, div#3, div#4, div#5 > p {
+    display:        none;
+  }
+}
